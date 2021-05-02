@@ -6,6 +6,8 @@
  */
 
 get_header();
+
+	do_action( 'purple_front_page_before' );
 ?>
 
 		<div class="container">
@@ -19,22 +21,11 @@ get_header();
 
 				endwhile;
 
-				if ( ! is_page() ) :
-					theming_posts_navigation();
-
-					comments_template();
-				endif;
-
-			else :
-
-			?>
-			<p class="h3 my-5"><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'purple' ); ?></p>
-			<?php
-
 			endif;
-
 ?>
 			</div>
 		</div>
 <?php
+	do_action( 'purple_front_page_after' );
+
 get_footer();
