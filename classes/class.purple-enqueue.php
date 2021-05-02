@@ -20,6 +20,7 @@ class Purple_Enqueue
 	public function init()
 	{
 		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_parent_styles' ), 999 );
 	}
 
 	/**
@@ -31,6 +32,17 @@ class Purple_Enqueue
 	{
 		wp_register_style( 'purple-style', get_stylesheet_directory_uri() .'/assets/dist/css/purple-style.css', array(), $this->theme_version() );
 		wp_enqueue_style( 'purple-style' );
+	}
+
+	/**
+	 * Dequeue parent styles
+	 *
+	 * @since Purple 1.0.0
+	 */
+	public function dequeue_parent_styles()
+	{
+		wp_dequeue_style( 'theming-style' );
+		wp_deregister_style( 'theming-style' );
 	}
 
 	/**
