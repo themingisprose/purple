@@ -1,4 +1,44 @@
 //
+// Custom
+//
+@import "custom";
+
+//
 // Import the parent styles
 //
 @import "../../../../theming_/assets/src/scss/style";
+
+
+//
+// Body
+//
+body{
+	background-color: $gray-900;
+	color: $gray-400;
+}
+
+//
+// Navigation
+//
+#site{
+	&-navigation{
+		@extend .navbar-dark;
+		@extend .bg-transparent;
+		@extend .py-5;
+		.navbar{
+			&-brand{
+				color: $gray-400;
+			}
+		}
+	}
+}
+
+//
+// Content
+//
+.entry{
+	&-title{
+		@extend .fw-bolder;
+		@extend .text-primary;
+	};
+}
