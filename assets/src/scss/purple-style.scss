@@ -8,12 +8,22 @@
 //
 @import "../../../../theming_/assets/src/scss/style";
 
+//
+// Mixing
+//
+.gradient{
+	&-text{
+		background: -webkit-linear-gradient(75deg, $purple, $pink);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
 
 //
 // Body
 //
 body{
-	background-color: $gray-900;
+	background-color: $purple-900;
 	color: $gray-400;
 }
 
@@ -28,6 +38,27 @@ body{
 		.navbar{
 			&-brand{
 				color: $gray-400;
+				font-family: $headings-font-family;
+				@extend .fw-bold;
+			}
+		}
+	}
+}
+
+#the{
+	&-top-menu{
+		.menu{
+			&-item{
+				@extend .ms-3;
+			}
+		}
+	}
+	&-footer-menu{
+		.menu{
+			&-item{
+				svg{
+					fill: $gray-400;
+				}
 			}
 		}
 	}
@@ -38,7 +69,6 @@ body{
 //
 .entry{
 	&-title{
-		@extend .fw-bolder;
-		@extend .text-primary;
+		@extend .gradient-text;
 	};
 }

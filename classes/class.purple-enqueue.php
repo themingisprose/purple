@@ -33,6 +33,10 @@ class Purple_Enqueue
 	{
 		wp_register_style( 'purple-style', get_stylesheet_directory_uri() .'/assets/dist/css/purple-style.css', array(), $this->theme_version() );
 		wp_enqueue_style( 'purple-style' );
+
+		// Google fonts
+		wp_register_style( 'purple-google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@800&display=swap' );
+		wp_enqueue_style( 'purple-google-fonts' );
 	}
 
 	/**
