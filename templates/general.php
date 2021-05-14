@@ -8,7 +8,7 @@ function purple_codersrank(){
 ?>
 	<section id="hero-codersrank" class="codersrank">
 		<div class="container text-center">
-			<h3 class="h1 mb-5"><?php theming_option( 'codersrank_title' ) ?></h3>
+			<h3 class="entry-title h1 mb-5"><?php theming_option( 'codersrank_title' ) ?></h3>
 			<codersrank-activity username="<?php theming_option( 'codersrank_user' ) ?>" labels legend tooltip branding="false"></codersrank-activity>
 		</div>
 	</section>
