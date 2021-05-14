@@ -56,6 +56,9 @@ body{
 	&-footer-menu{
 		.menu{
 			&-item{
+				a{
+					color: unset;
+				}
 				svg{
 					fill: $gray-400;
 				}
@@ -71,4 +74,15 @@ body{
 	&-title{
 		@extend .gradient-text;
 	};
+}
+
+//
+// Coders Rank
+//
+codersrank-activity{
+	--bg-color-0: #e2d9f3;
+	--bg-color-1: #a98eda;
+	--bg-color-2: #8c68cd;
+	--bg-color-3: #59359a;
+	--bg-color-4: #2c1a4d;
 }
