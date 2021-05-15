@@ -5,6 +5,8 @@
  * @since Purple 1.0.0
  */
 function purple_codersrank(){
+	if ( ! theming_get_option( 'codersrank_user' ) )
+		return;
 ?>
 	<section id="hero-codersrank" class="py-5 my-5">
 		<div class="container">
@@ -56,8 +58,12 @@ add_action( 'purple_front_page_after', 'purple_tech' );
  * @since Purple 1.0.0
  */
 function purple_front_posts(){
+	$limit = 3;
+	if ( $limit > wp_count_posts()->publish )
+		return;
+
 	$args = array(
-		'posts_per_page'	=> 3
+		'posts_per_page'	=> $limit
 	);
 
 	$the_query = new WP_Query ( $args );
