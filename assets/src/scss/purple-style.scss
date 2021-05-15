@@ -9,11 +9,16 @@
 @import "../../../../theming_/assets/src/scss/style";
 
 //
+// Import Bootstrap
+//
+@import "purple-bootstrap";
+
+//
 // Mixing
 //
 .gradient{
 	&-text{
-		background: -webkit-linear-gradient(75deg, $purple, $pink);
+		background: -webkit-linear-gradient(75deg, $purple, $pink 75%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
