@@ -1,6 +1,6 @@
 <?php
 /**
- * Coders Rank
+ * Coders Rank Section
  *
  * @since Purple 1.0.0
  */
