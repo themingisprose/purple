@@ -4,7 +4,7 @@
  *
  * @since Purple 1.0.0
  */
-class Purple_Coders_Rank extends Theming_Setting_Fields
+class Purple_Admin_Coders_Rank extends Theming_Setting_Fields
 {
 
 	/**
@@ -16,13 +16,13 @@ class Purple_Coders_Rank extends Theming_Setting_Fields
 	public function fields()
 	{
 		$fields = array(
-			'codersrank_user'	=> array(
-				'label'			=> __( 'User Name', 'purple' ),
-				'option'		=> 'codersrank_user',
-			),
 			'codersrank_title'	=> array(
 				'label'			=> __( 'Title', 'purple' ),
 				'option'		=> 'codersrank_title',
+			),
+			'codersrank_user'	=> array(
+				'label'			=> __( 'User Name', 'purple' ),
+				'option'		=> 'codersrank_user',
 			),
 		);
 
@@ -36,7 +36,7 @@ class Purple_Coders_Rank extends Theming_Setting_Fields
 	}
 }
 
-$init = new Purple_Coders_Rank(
+$init = new Purple_Admin_Coders_Rank(
 			'purple-codersrank-options',
 			__( 'Coders Rank Section', 'purple' ),
 			'purple-codersrank',
