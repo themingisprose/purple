@@ -37,6 +37,9 @@ class Purple_Enqueue
 		// Google fonts
 		wp_register_style( 'purple-google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@800&display=swap' );
 		wp_enqueue_style( 'purple-google-fonts' );
+
+		// Dequeue
+		wp_dequeue_style( 'mkaz-code-syntax-css' );
 	}
 
 	/**
@@ -71,8 +74,8 @@ class Purple_Enqueue
 		if ( ! $enqueue )
 			return;
 
-		wp_register_script( 'codersrank-activity', get_stylesheet_directory_uri() .'/assets/dist/js/codersrank-activity.js', array(), $this->theme_version(), true );
-		wp_enqueue_script( 'codersrank-activity' );
+		wp_register_script( 'purple-codersrank-activity', get_stylesheet_directory_uri() .'/assets/dist/js/codersrank-activity.js', array(), $this->theme_version(), true );
+		wp_enqueue_script( 'purple-codersrank-activity' );
 	}
 
 	/**

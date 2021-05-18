@@ -92,3 +92,14 @@ function purple_front_posts(){
 	wp_reset_postdata();
 }
 add_action( 'purple_front_page_after', 'purple_front_posts' );
+
+/**
+ * Purple Prism Theme
+ * Support for Code Syntax Block plugin
+ * @link https://wordpress.org/plugins/code-syntax-block/
+ *
+ * @since Purple 1.0.0
+ */
+add_filter( 'mkaz_prism_css_path', function(){
+	return '/assets/dist/css/prism.css';
+} );
