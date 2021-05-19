@@ -6,6 +6,14 @@ $link-decoration:			none;
 
 $primary:					#6f42c1; // $purple
 
+$input-bg:					#2c1a4d; // $purple-800
+$input-disabled-bg:			#8c68cd; // $purple-400
+$input-color:				#e2d9f3; // $purple-100
+$input-placeholder-color:	#a98eda; // $purple-300
+$input-border-color:		$input-bg;
+$input-focus-border-color:	#d63384; // $pink
+$input-focus-box-shadow:	0 0 0 .25rem $input-focus-border-color;
+
 $font-family-sans-serif:	'Open Sans', sans-serif;
 $headings-font-family:		'Roboto Slab', sans-serif;
 $headings-font-weight:		900;
