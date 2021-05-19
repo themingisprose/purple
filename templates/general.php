@@ -75,7 +75,7 @@ function purple_front_posts(){
 			<header class="text-center">
 				<h3 class="h1 mb-5"><?php theming_option( 'posts_title' ) ?></h3>
 			</header>
-			<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="row row-cols-1 row-cols-lg-3 g-4">
 <?php
 			while ( $the_query->have_posts() ) :
 				$the_query->the_post();
