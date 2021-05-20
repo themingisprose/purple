@@ -97,6 +97,13 @@ body{
 	}
 }
 
+code{
+	border: solid 1px $gray-800;
+	background-color: rgba( $gray-900, .25 );
+	@extend .p-1;
+	@extend .rounded;
+}
+
 //
 // Coders Rank
 //
