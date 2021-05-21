@@ -11,7 +11,7 @@ function purple_codersrank(){
 	<section id="hero-codersrank" class="py-5 my-5">
 		<div class="container">
 			<header class="text-center">
-				<h3 class="h1 mb-5"><?php theming_option( 'codersrank_title' ) ?></h3>
+				<h2 class="h1 mb-5"><?php theming_option( 'codersrank_title' ) ?></h2>
 			</header>
 			<codersrank-activity username="<?php theming_option( 'codersrank_user' ) ?>" labels legend tooltip step="7" branding="false"></codersrank-activity>
 		</div>
@@ -34,7 +34,7 @@ function purple_tech(){
 	<section id="herp-tech" class="py-5 my-5">
 		<div class="container">
 			<header class="text-center">
-				<h3 class="h1 mb-5"><?php theming_option( 'tech_title' ) ?></h3>
+				<h2 class="h1 mb-5"><?php theming_option( 'tech_title' ) ?></h2>
 			</header>
 			<div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 d-flex justify-content-evenly">
 			<?php
@@ -73,7 +73,7 @@ function purple_front_posts(){
 	<section id="hero-posts" class="py-5 my-5">
 		<div class="container">
 			<header class="text-center">
-				<h3 class="h1 mb-5"><?php theming_option( 'posts_title' ) ?></h3>
+				<h2 class="h1 mb-5"><?php theming_option( 'posts_title' ) ?></h2>
 			</header>
 			<div class="row row-cols-1 row-cols-lg-3 g-4">
 <?php
