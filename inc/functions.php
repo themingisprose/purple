@@ -39,3 +39,19 @@ function purple_google_analytics(){
 	theming_option( 'analytics' );
 }
 add_action( 'wp_head', 'purple_google_analytics' );
+
+/**
+ * Preload styles
+ *
+ * @since Purple 1.0.0
+ */
+function purple_preload_styles( $html, $handle, $href, $media ){
+    if ( 'purple-google-fonts' == $handle ) :
+        $html = '<link rel="preconnect" href="https://fonts.googleapis.com">';
+        $html .= '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+        $html .= '<link href="'. $href .'" rel="stylesheet" media="'. $media .'">';
+    endif;
+
+    return $html;
+}
+add_filter( 'style_loader_tag',  'purple_preload_styles', 10, 4 );
